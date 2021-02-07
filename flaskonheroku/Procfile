@@ -1,0 +1,1 @@
+web: gunicorn uploadre2:app

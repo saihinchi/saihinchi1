@@ -1,0 +1,161 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. All rights reserved.      
+
+新しいクロスプラットフォームの PowerShell をお試しください httpPS C:\intern> cd python
+
+PS C:\intern\python> cd flaskonheroku
+
+
+PS C:\intern\python\flaskonheroku> heroku login
+heroku: Press any key to open up the browser to login or q to e/e4415c74-1585-4ff9-af16-8e0ab74027af?requestor=SFMyNTY.g2gDbQAAAA4yMTkuMTIzLjE1Mi45N24GAK0E65R2AWIAAVGA.WuZIPiPN2r-5dzW1lQgVqLogging in... done
+Logged in as takuro308@gmail.com
+
+
+PS C:\intern\python\flaskonheroku> heroku create saihinchi003  
+https://saihinchi003.herokuapp.com/ | https://git.heroku.com/saihinchi003.git
+
+
+PS C:\intern\python\flaskonheroku> heroku git:remote -a saihinchi003
+set git remote heroku to https://git.heroku.com/saihinchi003.git
+
+
+PS C:\intern\python\flaskonheroku> flask --version
+Python 3.9.0
+Flask 1.1.2
+Werkzeug 1.0.1
+
+
+
+
+PS C:\intern\python\flaskonheroku> pip freeze > requirements.txt
+
+
+PS C:\intern\python\flaskonheroku> git init
+Reinitialized existing Git repository in C:/intern/python/flaskonheroku/.git/
+
+
+PS C:\intern\python\flaskonheroku> git add .
+
+
+
+PS C:\intern\python\flaskonheroku> git commit -m 'first commit'
+[master 4fa39b0] first commit
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 requirement.txt
+ create mode 100644 requirements.txt
+
+
+
+PS C:\intern\python\flaskonheroku> git push heroku master     
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (21/21), done.
+Writing objects: 100% (27/27), 2.89 KiB | 246.00 KiB/s, done.
+Total 27 (delta 4), reused 0 (delta 0), pack-reused 0
+remote: Compressing source files... done.
+remote: Building source:
+remote: 
+remote: -----> Python app detected
+remote:  !     Python has released a security update! Please consider upgrading to python-3.9.1
+remote:        Learn More: https://devcenter.heroku.com/articles/python-runtimes
+remote: -----> Installing python-3.9.0
+remote: -----> Installing pip 20.1.1, setuptools 47.1.1 and wheel 0.34.2
+remote: -----> Installing SQLite3
+remote: -----> Installing requirements with pip
+remote:        Collecting astroid==2.4.2
+remote:          Downloading astroid-2.4.2-py3-none-any.whl (213 kB)
+remote:        Collecting certifi==2020.12.5
+remote:          Downloading certifi-2020.12.5-py2.py3-none-any.whl (147 kB)
+remote:        Collecting chardet==4.0.0
+remote:          Downloading chardet-4.0.0-py2.py3-none-any.whl (178 kB)
+remote:        Collecting click==7.1.2
+remote:          Downloading click-7.1.2-py2.py3-none-any.whl 
+(82 kB)
+remote:        Collecting colorama==0.4.4
+remote:          Downloading colorama-0.4.4-py2.py3-none-any.whl (16 kB)
+remote:        Collecting Flask==1.1.2
+remote:          Downloading Flask-1.1.2-py2.py3-none-any.whl 
+(94 kB)
+remote:        Collecting gunicorn==20.0.4
+remote:          Downloading gunicorn-20.0.4-py2.py3-none-any.whl (77 kB)
+remote:        Collecting heroku==0.1.4
+remote:          Downloading heroku-0.1.4.tar.gz (10 kB)      
+remote:        Collecting idna==2.10
+remote:          Downloading idna-2.10-py2.py3-none-any.whl (58 kB)
+remote:        Collecting isort==5.6.4
+remote:          Downloading isort-5.6.4-py3-none-any.whl (98 
+kB)
+remote:        Collecting itsdangerous==1.1.0
+remote:          Downloading itsdangerous-1.1.0-py2.py3-none-any.whl (16 kB)
+remote:        Collecting Jinja2==2.11.2
+remote:          Downloading Jinja2-2.11.2-py2.py3-none-any.whl (125 kB)
+remote:        Collecting lazy-object-proxy==1.4.3
+remote:          Downloading lazy-object-proxy-1.4.3.tar.gz (34 kB)
+remote:          Installing build dependencies: started       
+remote:          Installing build dependencies: finished with 
+status 'done'
+remote:          Getting requirements to build wheel: started 
+remote:          Getting requirements to build wheel: finished with status 'done'
+remote:            Preparing wheel metadata: started
+remote:            Preparing wheel metadata: finished with status 'done'
+remote:        Collecting MarkupSafe==1.1.1
+remote:          Downloading MarkupSafe-1.1.1.tar.gz (19 kB)  
+remote:        Collecting mccabe==0.6.1
+remote:          Downloading mccabe-0.6.1-py2.py3-none-any.whl (8.6 kB)
+remote:        Collecting pylint==2.6.0
+remote:          Downloading pylint-2.6.0-py3-none-any.whl (325 kB)
+remote:        Collecting python-dateutil==1.5
+remote:          Downloading python-dateutil-1.5.tar.gz (233 kB)
+remote:        Collecting requests==2.25.1
+remote:          Downloading requests-2.25.1-py2.py3-none-any.whl (61 kB)
+remote:        Collecting six==1.15.0
+remote:          Downloading six-1.15.0-py2.py3-none-any.whl (10 kB)
+remote:        Collecting source==1.2.0
+remote:          Downloading source-1.2.0.zip (921 bytes)     
+remote:        Collecting toml==0.10.2
+remote:          Downloading toml-0.10.2-py2.py3-none-any.whl 
+(16 kB)
+remote:        Collecting urllib3==1.26.2
+remote:          Downloading urllib3-1.26.2-py2.py3-none-any.whl (136 kB)
+remote:        Collecting Werkzeug==1.0.1
+remote:          Downloading Werkzeug-1.0.1-py2.py3-none-any.whl (298 kB)
+remote:        Collecting wrapt==1.12.1
+remote:          Downloading wrapt-1.12.1.tar.gz (27 kB)      
+remote:        Building wheels for collected packages: heroku, lazy-object-proxy, MarkupSafe, python-dateutil, source, wrapt
+remote:          Building wheel for heroku (setup.py): started
+remote:          Building wheel for heroku (setup.py): finished with status 'done'
+remote:          Created wheel for heroku: filename=heroku-0.1.4-py3-none-any.whl size=12354 sha256=99ef28f57c96390813246688e6c5986e3d031deae8aee965732a0fd957d44d42
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-k596a7j6/wheels/61/7f/9a/af879a4e9e8d6ff17b1cdfe66336fbc86ea9e30707097515b9
+remote:          Building wheel for lazy-object-proxy (PEP 517): started
+remote:          Building wheel for lazy-object-proxy (PEP 517): finished with status 'done'
+remote:          Created wheel for lazy-object-proxy: filename=lazy_object_proxy-1.4.3-cp39-cp39-linux_x86_64.whl size=52765 sha256=6a9d9089fa083c40838bc13e669e043b22e88a7b1d8f17a2810358e7e415c273
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-k596a7j6/wheels/41/20/07/2a3e02cdfc8b442404202f6ef99ff1b1c16b73910968a46f2f
+remote:          Building wheel for MarkupSafe (setup.py): started
+remote:          Building wheel for MarkupSafe (setup.py): finished with status 'done'
+remote:          Created wheel for MarkupSafe: filename=MarkupSafe-1.1.1-cp39-cp39-linux_x86_64.whl size=32387 sha256=1d0615eda979928b053b56d1798c44038a68d4a5ea3abb8b8801ac5847bbbe94    
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-k596a7j6/wheels/e0/19/6f/6ba857621f50dc08e084312746ed3ebc14211ba30037d5e44e
+remote:          Building wheel for python-dateutil (setup.py): started
+remote:          Building wheel for python-dateutil (setup.py): finished with status 'done'
+remote:          Created wheel for python-dateutil: filename=python_dateutil-1.5-py3-none-any.whl size=202993 sha256=31ac508bbebc4141f388ffdae49428b0684971686b54e772cb287b5c378c5e5a     
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-k596a7j6/wheels/7a/63/dd/75ae41c09b61a072b15653bfc4abff3d3bfb997c93338bcf55
+remote:          Building wheel for source (setup.py): started
+remote:          Building wheel for source (setup.py): finished with status 'done'
+remote:          Created wheel for source: filename=source-1.2.0-py3-none-any.whl size=1358 sha256=471b91f6faa36898c22c028b9df1fa7772d2d237fe904d4a93c0e992fb9eb37e
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-k596a7j6/wheels/8f/7c/8d/11b1588d2473a90c676d57abc96e182f007c74838bf877ef1c
+remote:          Building wheel for wrapt (setup.py): started 
+remote:          Building wheel for wrapt (setup.py): finished with status 'done'
+remote:          Created wheel for wrapt: filename=wrapt-1.12.1-cp39-cp39-linux_x86_64.whl size=74951 sha256=fd1906fd486b83d957919e27fe9ac63766ce859b1aaf2dea05aa20de6f3d3f9c
+remote:          Stored in directory: /tmp/pip-ephem-wheel-cache-k596a7j6/wheels/98/23/68/efe259aaca055e93b08e74fbe512819c69a2155c11ba3c0f10
+remote:        Successfully built heroku lazy-object-proxy MarkupSafe python-dateutil source wrapt
+-object-proxy, astroid, certifi, chardet, click, colorama, Werkzeug, itsdangerous, MarkupSafe, Jinja2, Flask, gunicorn, urllib3, idna, requests, python-dateutil, heroku, isort, mccabe, toml, pylint, source
+remote:        Successfully installed Flask-1.1.2 Jinja2-2.11.2 MarkupSafe-1.1.1 Werkzeug-1.0.1 astroid-2.4.2 certifi-2020.12.5 chardet-4.0.0 click-7.1.2 colorama-0.4.4 gunicorn-20.0.4 heroku-0.1.4 idna-2.10 isort-5.6.4 itsdangerous-1.1.0 lazy-object-proxy-1.4.3 mccabe-0.6.1 pylint-2.6.0 python-dateutil-1.5 requests-2.25.1 six-1.15.0 source-1.2.0 toml-0.10.2 urllib3-1.26.2 wrapt-1.12.1
+remote:
+remote: -----> Compressing...
+remote:        Released v3
+remote:        https://saihinchi003.herokuapp.com/ deployed to Heroku
+remote:
+To https://git.heroku.com/saihinchi003.git
+ * [new branch]      master -> master
+
+
